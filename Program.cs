@@ -37,8 +37,8 @@ void Task66() //Задача 66: Задайте значения M и N. Нап�
 }
 void Task68() //Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 {
-    int numberM = UserNonNegativeNumberInput("enter non-negative(>=0) number M: ");
-    int numberN = UserNonNegativeNumberInput("enter non-negative(>=0) number N: ");
+    long numberM = UserNonNegativeNumberInput("enter non-negative(>=0) number M: ");
+    long numberN = UserNonNegativeNumberInput("enter non-negative(>=0) number N: ");
     Console.WriteLine($"m = {numberM}, n = {numberN} -> A(m,n) = {Ackermann(numberM, numberN)}");
 }
 int UserNumberInput(string msg)
@@ -94,7 +94,7 @@ int UserNonNegativeNumberInput(string msg)
     }
     return userNumber;
 }
-int Ackermann(int m, int n)
+long Ackermann(long m, long n)
 {
     if (m == 0) return n + 1;
     else if (n == 0) return Ackermann(m-1, 1);
